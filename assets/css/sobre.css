@@ -1,0 +1,106 @@
+/***********************
+    Estilos Gerais
+***********************/
+:root {
+  --primary-color: #fe0100;
+  --text-color: #fff;
+  --background-color: #000;
+  --font-family-heading: "Oswald", sans-serif;
+  --font-family-body: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-body);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/***********************
+      Layout Principal
+  ***********************/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.about-header p {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.about-content p {
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+.about-highlight {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/***********************
+      Responsividade
+  ***********************/
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4rem;
+  }
+
+  .about-header {
+    max-width: 400px;
+  }
+
+  .about-content {
+    max-width: 600px;
+    text-align: left;
+  }
+}

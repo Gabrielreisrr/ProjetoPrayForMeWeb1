@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<!-- 
+  Projeto de Web1
+  Feito por: Gabriel Reis
+ -->
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pray For Me</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/clock.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body>
+    <div class="music-player">
+      <img
+        src="assets/icons/record_19544.png"
+        alt="Disco"
+        class="music-disc"
+        onclick="toggleMusic()"
+      />
+      <audio
+        id="background-music"
+        src="assets/music/webTypeBeat.mp3"
+        autoplay
+      ></audio>
+    </div>
+    <main>
+      <div class="img-main-div">
+        <div src="" class="img-main-page" alt="Fundo Preto"></div>
+        <!-- <img src="" alt="" /> -->
+      </div>
+
+      <nav class="main-menu">
+        <div class="main-logo-div">
+          <a href="logo-link">
+            <img
+              class="img img-filter-white"
+              style="width: 50%"
+              src="assets/icons/ICONE 01.1.png"
+              alt="logo pray for me"
+            />
+          </a>
+        </div>
+        <div id="real-time-clock">
+          <span class="date" style="color: #9e9e9e"></span>
+          <span class="time" style="color: #9e9e9e"></span>
+        </div>
+        <div class="store-navigation">
+          <ul>
+            <li><a class="transition-effect" href="">Minha Conta</a></li>
+            <li>
+              <a class="transition-effect" id="shop-link" href="">Shop</a>
+            </li>
+            <li>
+              <a class="transition-effect" href="sobre.html">Sobre nós</a>
+            </li>
+            <li>
+              <a class="transition-effect" href="contacts.html">Contato</a>
+            </li>
+            <li>
+              <a class="transition-effect" href="lookbook.html">LookBook</a>
+            </li>
+          </ul>
+        </div>
+        <div id="shop-popup" class="popup-overlay">
+          <div class="popup-content">
+            <h2>Em breve!</h2>
+            <p>
+              Nosso primeiro *drop* de roupas estará disponível em breve. Fique
+              ligado!
+            </p>
+            <button id="close-popup" class="btn">Fechar</button>
+          </div>
+        </div>
+        <div class="social-menu">
+          <a href="https://www.instagram.com/g.reisr"
+            ><img
+              src="assets/icons/instagramIcon.png"
+              class="social-img img-filter-white"
+              alt="logo do instagram"
+          /></a>
+          <a href="https://www.instagram.com/g.reisr"
+            ><img
+              src="assets/icons/tiktokpng.png"
+              class="social-img img-filter-white"
+              alt="Logo do Tiktok"
+          /></a>
+          <a href="https://wa.me/11920042127"
+            ><img
+              src="assets/icons/wahtsappIcon.png"
+              class="social-img img-filter-white"
+              alt="Logo do WhatsApp"
+          /></a>
+        </div>
+      </nav>
+    </main>
+
+    <footer>
+      <section class="footer-1">
+        <a href="#">
+          <img
+            class="img img-filter-white"
+            style="width: 20rem"
+            src="assets/icons/LOGOTIPO 02.1.png"
+            alt="logo pray for me 2"
+          />
+        </a>
+
+        <form id="dynamicForm" class="footer-form">
+          <h3 class="footer-email-header">Receba ofertas exclusivas!</h3>
+          <input
+            class="footer-email-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter email"
+          />
+          <input class="footer-email-submit" type="submit" value="Subscribe" />
+          <p id="formResponse" class="footer-form-response"></p>
+        </form>
+      </section>
+
+      <div class="footer-pj">
+        <p style="color: #fff; font-size: 10px">
+          CNPJ: 00.000.000/0001-25 @2024 PRAY FOR ME
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/music.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/emailDynamicForm.js"></script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sobre Nós | Pray for Me</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/promotions.js"></script>
+  </head>
+  <body style="margin-top: 20px">
+    <div class="music-player" style="top: 20px;">
+      <img
+        src="assets/icons/record_19544.png"
+        alt="Disco"
+        class="music-disc"
+        onclick="toggleMusic()"
+      />
+      <audio
+        id="background-music"
+        src="assets/music/webTypeBeat.mp3"
+        autoplay
+      ></audio>
+    </div>
+    <div class="promo-bar">
+      <span class="promo-text"
+        >Frete grátis por tempo limitado! Aproveite já!</span
+      >
+    </div>
+    <div class="row-div">
+      <aside class="asside-nav">
+        <header class="header">
+          <nav class="main-menu-asside">
+            <div class="main-logo-div">
+              <a href="logo-link">
+                <img
+                  class="img img-filter-white"
+                  style="width: 50%"
+                  src="assets/icons/ICONE 01.1.png"
+                  alt="logo pray for me"
+                />
+              </a>
+            </div>
+            <div id="real-time-clock">
+              <span class="date" style="color: #9e9e9e"></span>
+              <span class="time" style="color: #9e9e9e"></span>
+            </div>
+            <div class="store-navigation">
+              <ul>
+                <li><a class="transition-effect" href="">Minha Conta</a></li>
+                <li><a class="transition-effect" href="" id="shop-link">Shop</a></li>
+                <li>
+                  <a class="transition-effect highlight" href="sobre.html"
+                    >Sobre nós</a
+                  >
+                </li>
+                <li><a class="transition-effect" href="contacts.html">Contato</a></li>
+                <li>
+                  <a class="transition-effect" href="lookbook.html">LookBook</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div id="shop-popup" class="popup-overlay">
+            <div class="popup-content">
+                <h2>Em breve!</h2>
+                <p>
+                Nosso primeiro *drop* de roupas estará disponível em breve. Fique
+                ligado!
+                </p>
+                <button id="close-popup" class="btn">Fechar</button>
+            </div>
+        </header>
+      </aside>
+      <main class="about-main">
+        <section class="hero-section">
+          <div class="hero-text">
+            <h1>Sobre Nós</h1>
+            <p>
+              Mais do que roupas, criamos significado.
+              <strong>Pray for Me</strong>
+              é a expressão de jornadas pessoais, momentos de dúvida e a busca
+              por crescimento.
+            </p>
+          </div>
+        </section>
+        <img
+          class="img"
+          src="assets/img/mockup3.png"
+          alt="Imagem mockup pray for me"
+        />
+
+        <section class="history">
+          <article>
+            <h2>Nossa História</h2>
+            <p>
+              Criada por mim, Gabriel Reis, em 2024,
+              <strong>Pray for Me</strong>
+              nasceu como um reflexo das lutas internas que todos enfrentamos.
+              Desde o início, nossa missão foi clara: criar peças que não sejam
+              apenas roupas, mas uma declaração de propósito.
+            </p>
+          </article>
+          <article>
+            <h2>Nosso Propósito</h2>
+            <p>
+              Queremos inspirar quem, diariamente, busca por identidade e
+              progresso. Cada peça é desenhada para aqueles que se recusam a se
+              conformar, oferecendo estilo, autenticidade e uma mensagem
+              silenciosa: todos estamos em nossa própria batalha, mas seguimos
+              em frente.
+            </p>
+          </article>
+        </section>
+
+        <section class="values">
+          <h2>Nossos Valores</h2>
+          <div class="values-grid">
+            <div class="value">
+              <h3>Autenticidade</h3>
+              <p>
+                Desenhamos roupas para quem quer se destacar sem abrir mão da
+                sua essência.
+              </p>
+            </div>
+            <div class="value">
+              <h3>Qualidade</h3>
+              <p>
+                Cada peça é feita com materiais de alta qualidade, garantindo
+                durabilidade e conforto.
+              </p>
+            </div>
+            <div class="value">
+              <h3>Inclusividade</h3>
+              <p>
+                Nossas criações refletem a diversidade e acolhem todos que
+                buscam significado.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <h2>Junte-se à Nossa Jornada</h2>
+          <p>
+            Vista-se com propósito. Faça parte de algo maior com
+            <strong>Pray for Me</strong>.
+          </p>
+          <a class="btn btn-primary" id="shop-link">Explore Nossas Peças</a>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <section class="footer-1">
+        <a href="#">
+          <img
+            class="img img-filter-white"
+            style="width: 20rem"
+            src="assets/icons/LOGOTIPO 02.1.png"
+            alt="logo pray for me 2"
+          />
+        </a>
+
+        <form
+          id="dynamicForm"
+          action="https://formsubmit.co/gabrielreisctt1@gmail.com"
+          method="POST"
+          class="footer-form"
+        >
+          <h3 class="footer-email-header">Receba ofertas exclusivas!</h3>
+          <input
+            class="footer-email-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter email"
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Bem-vindo à Pray for Me!"
+          />
+          <input
+            type="hidden"
+            name="message"
+            value="Obrigado por se inscrever para receber nossas ofertas exclusivas! Fique atento ao seu e-mail para novidades."
+          />
+          <!-- Configurações do FormSubmit -->
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Obrigado por se inscrever! Você receberá nossas ofertas em breve."
+          />
+          <input type="hidden" name="_template" value="box" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input class="footer-email-submit" type="submit" value="Subscribe" />
+        </form>
+      </section>
+
+      <div class="footer-pj">
+        <p style="color: #fff; font-size: 10px">
+          CNPJ: 00.000.000/0001-25 @2024 PRAY FOR ME
+        </p>
+      </div>
+    </footer>
+    <script src="assets/js/music.js"></script>
+    <script src="assets/js/popup.js"></script>
+  </body>
+</html>

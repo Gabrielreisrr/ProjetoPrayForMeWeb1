@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sobre Nós | Pray for Me</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/promotions.js"></script>
+  </head>
+
+  <body style="margin-top: 20px">
+    <div class="music-player" style="top: 20px;">
+      <img
+        src="assets/icons/record_19544.png"
+        alt="Disco"
+        class="music-disc"
+        onclick="toggleMusic()"
+      />
+      <audio autoplay
+        id="background-music"
+        src="assets/music/webTypeBeat.mp3"
+      ></audio>
+    </div>
+    <div class="promo-bar">
+      <span class="promo-text"
+        >Frete grátis por tempo limitado! Aproveite já!</span
+      >
+    </div>
+
+    <main>
+      <section class="lookbook-header">
+        <div class="lookbook-img-header">
+          <div class="main-logo-div">
+            <a href="logo-link">
+              <img
+                class="img img-filter-white"
+                style="width: 50%"
+                src="assets/icons/ICONE 01.1.png"
+                alt="logo pray for me"
+              />
+            </a>
+          </div>
+          <div id="real-time-clock">
+            <span class="date" style="color: #9e9e9e"></span>
+            <span class="time" style="color: #9e9e9e"></span>
+          </div>
+          <section class="lookbook-section">
+            <h1>LookBook Pray For Me!</h1>
+            <p>Dê uma olhada mais de perto em nossas peças</p>
+          </section>
+        </div>
+        <div>
+          <button id="shop-link">Comprar agora</button>
+          <button><a href="index.html">Voltar ao inicio</a></button>
+        </div>
+        <div id="shop-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Em breve!</h2>
+            <p>
+            Nosso primeiro *drop* de roupas estará disponível em breve. Fique
+            ligado!
+            </p>
+            <button id="close-popup" class="btn">Fechar</button>
+        </div>
+      </section>
+     
+
+      <section class="imgs-grid-lookbook">
+        <div>
+          <img src="assets/img/mockup1.png" alt="imagem mockup 1" />
+        </div>
+        <div>
+          <img src="assets/img/mockup2.png" alt="imagem mockup 1" />
+        </div>
+        <div>
+          <img src="assets/img/mockup3.png" alt="imagem mockup 1" />
+        </div>
+        <div>
+          <img src="assets/img/mockup4.png" alt="imagem mockup 1" />
+        </div>
+        <div>
+          <img src="assets/img/img3.PNG" alt="imagem mockup 1" />
+        </div>
+        <div>
+          <img src="assets/img/mockup2.png" alt="imagem mockup 1" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-1">
+        <a href="#">
+          <img
+            class="img img-filter-white"
+            style="width: 20rem"
+            src="assets/icons/LOGOTIPO 02.1.png"
+            alt="logo pray for me 2"
+          />
+        </a>
+
+        <form
+          id="dynamicForm"
+          action="https://formsubmit.co/gabrielreisctt1@gmail.com"
+          method="POST"
+          class="footer-form"
+        >
+          <h3 class="footer-email-header">Receba ofertas exclusivas!</h3>
+          <input
+            class="footer-email-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter email"
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Bem-vindo à Pray for Me!"
+          />
+          <input
+            type="hidden"
+            name="message"
+            value="Obrigado por se inscrever para receber nossas ofertas exclusivas! Fique atento ao seu e-mail para novidades."
+          />
+          <!-- Configurações do FormSubmit -->
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Obrigado por se inscrever! Você receberá nossas ofertas em breve."
+          />
+          <input type="hidden" name="_template" value="box" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input class="footer-email-submit" type="submit" value="Subscribe" />
+        </form>
+      </section>
+
+      <div class="footer-pj">
+        <p style="color: #fff; font-size: 10px">
+          CNPJ: 00.000.000/0001-25 @2024 PRAY FOR ME
+        </p>
+      </div>
+    </footer>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/music.js"></script>
+  </body>
+</html>
