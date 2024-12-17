@@ -163,8 +163,6 @@
               ></textarea>
             </div>
 
-            <input type="hidden" name="_captcha" value="false" />
-
             <button type="submit" class="submit-btn">Enviar Informações</button>
           </form>
         </section>
@@ -217,11 +215,8 @@
     <script>
       const form = document.getElementById("accountForm");
       const formOutput = document.getElementById("formOutput");
-      let isSubmitting = false; // Flag para controlar envio
 
       form.addEventListener("submit", (event) => {
-        if (isSubmitting) return; // Se já estiver enviando, permite envio
-
         event.preventDefault();
 
         const name = document.getElementById("name").value;
@@ -230,13 +225,15 @@
         const message = document.getElementById("message").value;
 
         formOutput.innerHTML = `
-      <p><strong>Nome:</strong> ${name}</p>
-      <p><strong>E-mail:</strong> ${email}</p>
-      <p><strong>Telefone:</strong> ${phone}</p>
-      <p><strong>Mensagem:</strong> ${message}</p>
-    `;
+          <p><strong>Nome:</strong> ${name}</p>
+          <p><strong>E-mail:</strong> ${email}</p>
+          <p><strong>Telefone:</strong> ${phone}</p>
+          <p><strong>Mensagem:</strong> ${message}</p>
+      `;
 
-        form.submit();
+        setTimeout(() => {
+          form.submit();
+        }, 5000);
       });
     </script>
   </body>
