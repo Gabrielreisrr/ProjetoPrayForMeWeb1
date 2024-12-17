@@ -19,6 +19,7 @@ function updateClock() {
   timeElement.textContent = `${formattedTime} ${timeZone}`;
 }
 
-setInterval(updateClock, 1000);
-
-updateClock();
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(updateClock, 1000);
+  updateClock();
+});

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       user_email: email,
       subject: "Bem-vindo à Pray for Me!",
       message:
-        "Obrigado por se inscrever para receber nossas ofertas exclusivas! Fique atento ao seu e-mail para novidades.",
+        "Obrigado por se inscrever para receber nossas ofertas exclusivas!",
     };
 
     emailjs.send("service_pw7hndm", "template_sdm4f59", templateParams).then(

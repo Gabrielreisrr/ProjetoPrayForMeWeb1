@@ -1,0 +1,23 @@
+/* botão tema */
+
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: var(--primary-color) solid 2px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--primary-color);
+}
