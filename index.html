@@ -18,8 +18,20 @@
     />
     <script src="assets/js/clock.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "UeiuR5rqUZ95-c7d7",
+        });
+      })();
+    </script>
   </head>
   <body>
+    <button id="theme-toggle" class="theme-btn"></button>
     <div class="music-player">
       <img
         src="assets/icons/record_19544.png"
@@ -36,12 +48,11 @@
     <main>
       <div class="img-main-div">
         <div src="" class="img-main-page" alt="Fundo Preto"></div>
-        <!-- <img src="" alt="" /> -->
       </div>
 
       <nav class="main-menu">
         <div class="main-logo-div">
-          <a href="logo-link">
+          <a href="#">
             <img
               class="img img-filter-white"
               style="width: 50%"
@@ -56,9 +67,9 @@
         </div>
         <div class="store-navigation">
           <ul>
-            <li><a class="transition-effect" href="">Minha Conta</a></li>
+            <li><a class="transition-effect" href="myAccount.html">Minha Conta</a></li>
             <li>
-              <a class="transition-effect" id="shop-link" href="">Shop</a>
+              <a class="transition-effect shop-link" href="">Shop</a>
             </li>
             <li>
               <a class="transition-effect" href="sobre.html">Sobre nós</a>
@@ -88,7 +99,7 @@
               class="social-img img-filter-white"
               alt="logo do instagram"
           /></a>
-          <a href="https://www.instagram.com/g.reisr"
+          <a href="https://www.tiktok.com/@yrreis"
             ><img
               src="assets/icons/tiktokpng.png"
               class="social-img img-filter-white"
@@ -140,5 +151,6 @@
     <script src="assets/js/music.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/emailDynamicForm.js"></script>
+    <script src="assets/js/buttonTheme.js"></script>
   </body>
 </html>

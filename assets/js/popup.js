@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const shopLink = document.getElementById("shop-link");
+  const shopLinks = document.querySelectorAll(".shop-link");
   const popup = document.getElementById("shop-popup");
   const closePopup = document.getElementById("close-popup");
 
-  //   console.log({ shopLink, popup, closePopup });
+  console.log({ shopLinks, popup, closePopup });
 
-  shopLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    popup.style.display = "flex";
+  shopLinks.forEach((shopLink) => {
+    shopLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      popup.style.display = "flex";
+    });
   });
 
   closePopup.addEventListener("click", () => {

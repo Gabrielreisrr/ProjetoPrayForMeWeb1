@@ -12,6 +12,17 @@
     />
     <script src="assets/js/clock.js"></script>
     <script src="assets/js/promotions.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "UeiuR5rqUZ95-c7d7",
+        });
+      })();
+    </script>
   </head>
 
   <body style="margin-top: 20px">
@@ -37,7 +48,7 @@
       <section class="lookbook-header">
         <div class="lookbook-img-header">
           <div class="main-logo-div">
-            <a href="logo-link">
+            <a href="index.html">
               <img
                 class="img img-filter-white"
                 style="width: 50%"
@@ -56,7 +67,7 @@
           </section>
         </div>
         <div>
-          <button id="shop-link">Comprar agora</button>
+          <button class="shop-link">Comprar agora</button>
           <button><a href="index.html">Voltar ao inicio</a></button>
         </div>
         <div id="shop-popup" class="popup-overlay">
@@ -94,17 +105,9 @@
           <img src="assets/img/img4.jpg" alt="imagem mockup 1" />
         </div>
         <div>
-          <img src="assets/img/img5.jpg" alt="imagem mockup 1" />
+          <img src="assets/img/img5.JPG" alt="imagem mockup 1" />
         </div>
-        <div>
-          <img src="assets/img/img1.jpg" alt="imagem mockup 1" />
-        </div>
-        <div>
-          <img src="assets/img/img1.jpg" alt="imagem mockup 1" />
-        </div>
-        <div>
-          <img src="assets/img/img1.jpg" alt="imagem mockup 1" />
-        </div>
+        
       </section>
     </main>
 
@@ -119,12 +122,7 @@
           />
         </a>
 
-        <form
-          id="dynamicForm"
-          action="https://formsubmit.co/gabrielreisctt1@gmail.com"
-          method="POST"
-          class="footer-form"
-        >
+        <form id="dynamicForm" class="footer-form">
           <h3 class="footer-email-header">Receba ofertas exclusivas!</h3>
           <input
             class="footer-email-input"
@@ -134,26 +132,8 @@
             required
             placeholder="Enter email"
           />
-          <input
-            type="hidden"
-            name="_subject"
-            value="Bem-vindo à Pray for Me!"
-          />
-          <input
-            type="hidden"
-            name="message"
-            value="Obrigado por se inscrever para receber nossas ofertas exclusivas! Fique atento ao seu e-mail para novidades."
-          />
-          <!-- Configurações do FormSubmit -->
-          <input
-            type="hidden"
-            name="_autoresponse"
-            value="Obrigado por se inscrever! Você receberá nossas ofertas em breve."
-          />
-          <input type="hidden" name="_template" value="box" />
-          <input type="hidden" name="_captcha" value="false" />
-
           <input class="footer-email-submit" type="submit" value="Subscribe" />
+          <p id="formResponse" class="footer-form-response"></p>
         </form>
       </section>
 
@@ -165,5 +145,7 @@
     </footer>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/music.js"></script>
+    <script src="assets/js/buttonTheme.js"></script>
+    <script src="assets/js/emailDynamicForm.js"></script>
   </body>
 </html>

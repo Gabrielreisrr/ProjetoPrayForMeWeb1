@@ -12,9 +12,37 @@
     />
     <script src="assets/js/clock.js"></script>
     <script src="assets/js/promotions.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "UeiuR5rqUZ95-c7d7",
+        });
+      })();
+    </script>
   </head>
   <body style="margin-top: 20px">
-    <div class="music-player" style="top: 20px;">
+    <button class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="shop-popup" class="popup-overlay">
+      <div class="popup-content">
+        <h2>Em breve!</h2>
+        <p>
+          Nosso primeiro *drop* de roupas estará disponível em breve. Fique
+          ligado!
+        </p>
+        <button id="close-popup" class="btn">Fechar</button>
+      </div>
+    </div>
+    <div class="music-player" style="top: 20px">
       <img
         src="assets/icons/record_19544.png"
         alt="Disco"
@@ -37,7 +65,7 @@
         <header class="header">
           <nav class="main-menu-asside">
             <div class="main-logo-div">
-              <a href="logo-link">
+              <a href="index.html">
                 <img
                   class="img img-filter-white"
                   style="width: 50%"
@@ -52,29 +80,28 @@
             </div>
             <div class="store-navigation">
               <ul>
-                <li><a class="transition-effect" href="">Minha Conta</a></li>
-                <li><a class="transition-effect" href="" id="shop-link">Shop</a></li>
+                <li>
+                  <a class="transition-effect" href="myAccount.html"
+                    >Minha Conta</a
+                  >
+                </li>
+                <li>
+                  <a class="transition-effect shop-link" href="">Shop</a>
+                </li>
                 <li>
                   <a class="transition-effect highlight" href="sobre.html"
                     >Sobre nós</a
                   >
                 </li>
-                <li><a class="transition-effect" href="contacts.html">Contato</a></li>
+                <li>
+                  <a class="transition-effect" href="contacts.html">Contato</a>
+                </li>
                 <li>
                   <a class="transition-effect" href="lookbook.html">LookBook</a>
                 </li>
               </ul>
             </div>
           </nav>
-          <div id="shop-popup" class="popup-overlay">
-            <div class="popup-content">
-                <h2>Em breve!</h2>
-                <p>
-                Nosso primeiro *drop* de roupas estará disponível em breve. Fique
-                ligado!
-                </p>
-                <button id="close-popup" class="btn">Fechar</button>
-            </div>
         </header>
       </aside>
       <main class="about-main">
@@ -151,7 +178,7 @@
             Vista-se com propósito. Faça parte de algo maior com
             <strong>Pray for Me</strong>.
           </p>
-          <a class="btn btn-primary" id="shop-link">Explore Nossas Peças</a>
+          <a class="btn btn-primary shop-link" href="">Explore Nossas Peças</a>
         </section>
       </main>
     </div>
@@ -167,12 +194,7 @@
           />
         </a>
 
-        <form
-          id="dynamicForm"
-          action="https://formsubmit.co/gabrielreisctt1@gmail.com"
-          method="POST"
-          class="footer-form"
-        >
+        <form id="dynamicForm" class="footer-form">
           <h3 class="footer-email-header">Receba ofertas exclusivas!</h3>
           <input
             class="footer-email-input"
@@ -182,26 +204,8 @@
             required
             placeholder="Enter email"
           />
-          <input
-            type="hidden"
-            name="_subject"
-            value="Bem-vindo à Pray for Me!"
-          />
-          <input
-            type="hidden"
-            name="message"
-            value="Obrigado por se inscrever para receber nossas ofertas exclusivas! Fique atento ao seu e-mail para novidades."
-          />
-          <!-- Configurações do FormSubmit -->
-          <input
-            type="hidden"
-            name="_autoresponse"
-            value="Obrigado por se inscrever! Você receberá nossas ofertas em breve."
-          />
-          <input type="hidden" name="_template" value="box" />
-          <input type="hidden" name="_captcha" value="false" />
-
           <input class="footer-email-submit" type="submit" value="Subscribe" />
+          <p id="formResponse" class="footer-form-response"></p>
         </form>
       </section>
 
@@ -213,5 +217,8 @@
     </footer>
     <script src="assets/js/music.js"></script>
     <script src="assets/js/popup.js"></script>
+    <script src="assets/js/assideResponsive.js"></script>
+    <script src="assets/js/buttonTheme.js"></script>
+    <script src="assets/js/emailDynamicForm.js"></script>
   </body>
 </html>
